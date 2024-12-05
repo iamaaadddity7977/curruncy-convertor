@@ -33,64 +33,7 @@ let img = element.parentElement.querySelector("img");
 img.src = newSrc;
 };
 
-/* ============================This code is for finding error============================/
-/ btn.addEventListener("click", async (evnt) => {
-evnt.preventDefault();
-let amount = document.querySelector(".amount input");
-let amtVal = amount.value;
-if (amtVal === "" || amtVal < 1) {
-amtVal = 1;
-amount.value = "1";
-}
 
-const URL = ${BASE_URL}/${fromCurr.value.toLowerCase()}.json;
-let response = await fetch(URL);
-let data = await response.json();
-
-let fromCurrency = fromCurr.value.toLowerCase();
-let toCurrency = fromCurr.value.toLowerCase();
-
-console.log(data.fromCurrency[toCurrency])
-
-});
-*/
-
-/* btn.addEventListener("click", async (evnt) => {
-evnt.preventDefault();
-let amount = document.querySelector(".amount input");
-let amtVal = amount.value;
-if (amtVal === "" || amtVal < 1) {
-amtVal = 1;
-amount.value = "1";
-}
-
-const URL = ${BASE_URL}/${fromCurr.value.toLowerCase()}.json;
-
-try {
-let response = await fetch(URL);
-if (!response.ok) {
-throw new Error("Network response was not ok");
-}
-let data = await response.json();
-
-let fromCurrency = fromCurr.value.toLowerCase();
-let toCurrency = toCurr.value.toLowerCase(); // Assuming you have toCurr element
-
-if (data[fromCurrency] && data[fromCurrency][toCurrency]) {
-rate = data[fromCurrency][toCurrency]
-  console.log(data[fromCurrency][toCurrency]);
-} else {
-  console.error("Currency data not found in the response");
-}
-} catch (error) {
-console.error("Error fetching or processing data: ", error);
-}
-
-let finalAmount = amount * rate;
-msg.innerText = ${amtVal} ${fromCurr,value} = ${finalAmount} ${toCurr.value}
-}); */
-
-/* ============================Code ends here============================*/
 
 btn.addEventListener("click", async (evnt) => {
 evnt.preventDefault();
@@ -113,13 +56,13 @@ let data = await response.json();
 let fromCurrency = fromCurr.value.toLowerCase();
 let toCurrency = toCurr.value.toLowerCase(); // Assuming you have toCurr element
 
-/* console.log(fromCurrency,toCurrency)
-console.log(data[fromCurrency][toCurrency]) */
+//  console.log(fromCurrency,toCurrency)
+// console.log(data[fromCurrency][toCurrency]) 
 
 let rate;
 if (data[fromCurrency] && data[fromCurrency][toCurrency]) {
   rate = data[fromCurrency][toCurrency];
-  console.log(rate);
+ // console.log(rate);
 } else {
   console.error("Currency data not found in the response");
   rate = 1; // Fallback rate to avoid further errors

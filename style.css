@@ -9,11 +9,13 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4e4ba;
+    background-color: #f0f4ff ;
+    color:#333333;
+
 }
 
 .container {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
@@ -73,13 +75,26 @@ form input {
 
 form button{
     height: 3rem;
-    background-color: #af4d98;
+    background-color: #007bff;
     color: #fff;
     font-size: 1.15rem;
     cursor: pointer;
+}
+form button:hover{
+    background-color:#e91e63;
 }
 
 #error-message {
     color: red;
     display: none;
+}
+
+#numberInput{
+        width: 100wh;
+        height: 5vh;
+        padding: 3px;
+        font-size: 110%;
+}
+.tag{
+    font-size: 150%;
 }
